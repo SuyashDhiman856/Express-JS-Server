@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Travel Assistant</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin: 20px 0;
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      margin: 0 10px;
+      font-size: 16px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: black; /* Ensure text is black */
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #suggestions {
+      margin-top: 20px;
+      width: 80%;
+      max-width: 600px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI Travel Assistant</h1>
+  <form id="ai-assistant-form">
+    <input type="text" id="query" name="query" placeholder="Enter a place" required>
+    <button type="submit">Get Suggestions</button>
+  </form>
+  <div id="suggestions"></div>
+
+  <script>
+    document.getElementById('ai-assistant-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const query = document.getElementById('query').value;
+      const response = await fetch('/ai-assistant', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ query })
+      });
+      const data = await response.json();
+      document.getElementById('suggestions').innerText = data.suggestions;
+    });
+  </script>
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Travel Assistant</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin: 20px 0;
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      margin: 0 10px;
+      font-size: 16px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: black; /* Ensure text is black */
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #suggestions {
+      margin-top: 20px;
+      width: 80%;
+      max-width: 600px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI Travel Assistant</h1>
+  <form id="ai-assistant-form">
+    <input type="text" id="query" name="query" placeholder="Enter a place" required>
+    <button type="submit">Get Suggestions</button>
+  </form>
+  <div id="suggestions"></div>
+
+  <script>
+    document.getElementById('ai-assistant-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const query = document.getElementById('query').value;
+      const response = await fetch('/ai-assistant', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ query })
+      });
+      const data = await response.json();
+      document.getElementById('suggestions').innerText = data.suggestions;
+    });
+  </script>
+</body>
+</html>
+</html>

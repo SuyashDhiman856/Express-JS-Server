@@ -1,0 +1,123 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Offers</title>
+</head>
+<body>
+  <h1>Flight Offers</h1>
+  <form action="/flights" method="get">
+    <label for="origin">From:</label>
+    <input type="text" id="origin" name="origin" required>
+    <label for="destination">To:</label>
+    <input type="text" id="destination" name="destination" required>
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+    {{#each flights}}
+      <li>
+        <p>From: {{this.itineraries.[0].segments.[0].departure.iataCode}}</p>
+        <p>To: {{this.itineraries.[0].segments.[0].arrival.iataCode}}</p>
+        <p>Price: {{this.price.total}} {{this.price.currency}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</body>
+</html> --}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Offers</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin: 20px 0;
+      text-align: center;
+    }
+    label {
+      margin-right: 10px;
+    }
+    select {
+      padding: 10px;
+      margin: 0 10px;
+      font-size: 16px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: black; /* Ensure text is black */
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #flights-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      justify-items: center;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      width: 100%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .card p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Flight Offers</h1>
+  <form action="/flights" method="get">
+    <label for="origin">From:</label>
+    <select id="origin" name="origin" required>
+      <option value="DEL">Delhi</option>
+      <option value="BOM">Mumbai</option>
+      <option value="BLR">Bangalore</option>
+      <option value="HYD">Hyderabad</option>
+      <option value="MAA">Chennai</option>
+      <option value="CCU">Kolkata</option>
+    </select>
+    <label for="destination">To:</label>
+    <select id="destination" name="destination" required>
+      <option value="DEL">Delhi</option>
+      <option value="BOM">Mumbai</option>
+      <option value="BLR">Bangalore</option>
+      <option value="HYD">Hyderabad</option>
+      <option value="MAA">Chennai</option>
+      <option value="CCU">Kolkata</option>
+    </select>
+    <button type="submit">Search</button>
+  </form>
+  <div id="flights-container">
+    {{#each flights}}
+      <div class="card">
+        <pre><strong>From:</strong> {{this.itineraries.[0].segments.[0].departure.iataCode}}            <strong>To:</strong> {{this.itineraries.[0].segments.[0].arrival.iataCode}}            <strong>Price:</strong> {{this.price.total}} {{this.price.currency}}</pre>
+        <p></p>
+        <p></p>
+      </div>
+    {{/each}}
+  </div>
+</body>
+</html>

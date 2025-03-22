@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourism News</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .news-container {
+      width: 80%;
+      max-width: 800px;
+      margin-top: 20px;
+    }
+    .news-article {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .news-article h2 {
+      margin: 0 0 10px;
+    }
+    .news-article p {
+      margin: 5px 0;
+    }
+    .news-article a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .news-article a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tourism News</h1>
+  <div class="news-container">
+    {{#each articles}}
+      <div class="news-article">
+        <h2>{{this.title}}</h2>
+        <p><strong>Source:</strong> {{this.source.name}}</p>
+        <p><strong>Published At:</strong> {{this.publishedAt}}</p>
+        <p>{{this.description}}</p>
+        <a href="{{this.url}}" target="_blank">Read more</a>
+      </div>
+    {{/each}}
+  </div>
+</body>
+</html>

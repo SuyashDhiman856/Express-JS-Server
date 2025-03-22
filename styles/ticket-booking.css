@@ -1,0 +1,329 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+input:focus {
+    border: 1px solid #ff4d4d;
+    outline: none;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+.header-icons i {
+    transition: color 0.3s;
+}
+
+.header-icons i:hover {
+    color: #ff4d4d;
+}
+.banner {
+    filter: blur(8px);
+}
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Adjust height */
+    overflow: hidden;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+.divider {
+    width: 1px;
+    height: 30px;
+    background: #ddd;
+}
+
+/* Navigation Items */
+.nav-items {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-item img {
+    height: 24px;
+}
+
+/* Account Section */
+.account-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.account-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #444;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.account-item:hover {
+    color: red;
+}
+
+.account-item i {
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-section, .account-section {
+        justify-content: center;
+    }
+
+    .nav-items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Booking Section */
+.booking-section {
+    position: relative;
+    text-align: center;
+}
+
+.banner-container {
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: blur(3px);
+}
+
+#bus{
+    color: red;
+}
+.booking-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.booking-form h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
+    background: white;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 120px;
+}
+
+.swap-icon {
+    display: flex;
+    align-items: center;
+}
+
+.search-btn {
+    background: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Government Buses */
+.govt-buses {
+    padding: 20px;
+    text-align: center;
+}
+
+.govt-buses h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.bus-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.bus-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    width: 250px;
+    background: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bus-card h2 {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating {
+    background: green;
+    color: white;
+    padding: 3px 5px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.official {
+    color: gray;
+    font-size: 14px;
+}
+
+.offer {
+    color: red;
+    font-size: 14px;
+}
+/* Footer Styling */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 20px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    color: #ff4500;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff4500;
+}
+
+.footer-section .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer-section .social-icons a:hover {
+    color: #ff4500;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #111;
+    margin-top: 20px;
+}

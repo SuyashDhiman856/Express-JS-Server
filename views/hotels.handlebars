@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Offers</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .hotel-container {
+      width: 80%;
+      max-width: 800px;
+      margin-top: 20px;
+    }
+    .hotel-offer {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .hotel-offer h2 {
+      margin: 0 0 10px;
+    }
+    .hotel-offer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hotel Offers</h1>
+  <div class="hotel-container">
+    {{#each hotels}}
+      <div class="hotel-offer">
+        <h2>{{this.hotel.name}}</h2>
+        <p><strong>City:</strong> {{this.hotel.address.cityName}}</p>
+        <p><strong>Price:</strong> {{this.offers.[0].price.total}} {{this.offers.[0].price.currency}}</p>
+      </div>
+    {{/each}}
+  </div>
+</body>
+</html>
